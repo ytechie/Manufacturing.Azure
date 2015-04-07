@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>2.4</ProductVersion>
+    <ProductVersion>2.5</ProductVersion>
     <ProjectGuid>44025b46-8c02-4488-9810-314d61f255bd</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -42,11 +42,6 @@
     <Folder Include="Profiles" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Manufacturing.FacilityDataProcessorContent\diagnostics.wadcfg">
-      <SubType>Content</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Manufacturing.FacilityDataReceiver\Manufacturing.FacilityDataProcessor.csproj">
       <Name>Manufacturing.FacilityDataProcessor</Name>
       <Project>{39c3585d-a22e-4b04-bebd-94c826c2918e}</Project>
@@ -59,10 +54,13 @@
   <ItemGroup>
     <PublishProfile Include="Profiles\manufacturingStaging.azurePubxml" />
   </ItemGroup>
+  <ItemGroup>
+    <DiagnosticsConfiguration Include="Manufacturing.FacilityDataProcessorContent\diagnostics.wadcfgx" />
+  </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
-    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.4\</CloudExtensionsDir>
+    <CloudExtensionsDir Condition=" '$(CloudExtensionsDir)' == '' ">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Windows Azure Tools\2.5\</CloudExtensionsDir>
   </PropertyGroup>
   <Import Project="$(CloudExtensionsDir)Microsoft.WindowsAzure.targets" />
 </Project>

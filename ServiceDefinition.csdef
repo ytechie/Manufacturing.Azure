@@ -2,7 +2,6 @@
 <ServiceDefinition name="Manufacturing.FacilityDataReceiver" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
   <WorkerRole name="Manufacturing.FacilityDataProcessor" vmsize="Small">
     <Imports>
-      <Import moduleName="Diagnostics" />
       <Import moduleName="RemoteAccess" />
       <Import moduleName="RemoteForwarder" />
     </Imports>
